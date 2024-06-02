@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Movies Top Trend</h1>
+  <div class="collection">
+    @for (movie of movies; track movie.id) {
+    <div class="card">
+      <h3>{{ movie.title }}</h3>
+      <img [src]="getFullImageUrl(movie.poster_path)" />
+      <p>{{ movie.overview }}</p>
+    </div>
+    }
+  </div>
+</div>
